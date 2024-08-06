@@ -29,9 +29,7 @@ int ft_strlen(char *str)
 {
 	int i = 0;
 	while(str[i]!='\0')
-	{
 		i++;
-	}
 	return i;
 }
 
@@ -128,9 +126,7 @@ void ft_print_combn(int n)
 		{
 			ft_putchar(k + '0');
 			if(k < 9)
-			{
 				ft_putchar(' ');
-			}
 			k++;
 		}
 		return;
@@ -154,9 +150,7 @@ void ft_print_combn(int n)
 			while(zeros--)
 			{
 				if(c_digits < n)
-				{
 					numarray[i++] = '0';
-				}
 			}
 		numarray[i] = '\0';
 		if(are_digits_unique(numarray))
@@ -195,5 +189,5 @@ void ft_print_combn(int n)
 
 int main()
 {
-	ft_print_combn(3);
+	ft_print_combn(7);
 }
