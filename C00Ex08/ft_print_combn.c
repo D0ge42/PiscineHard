@@ -87,14 +87,14 @@ int check_combinations(char *base, char *to_check)
 	if(ft_strlen(base) != ft_strlen(to_check))
 		return 0;
 	//Scorro la base e per ogni suo valore aumento l'index di base i - '0' di 1.
-	//Se il numero è 3 count sarà count[base[i] - '0'] o count 3. E count [3] sarà marchiato ad 1. 
+	//Se il numero è 3 count sarà count[base[i] - '0'] o count 3. E count [3] sarà flaggato ad 1. 
 	while(base[i] !='\0')
 	{
 		count[base[i]-'0']++;
 		i++;
 	}
 	i = 0;
-	//Dopo aver marchiato tutti i valori di base ad 1 andrò a sottrarre 1 ad ogni valore di count
+	//Dopo aver flaggato tutti i valori di base ad 1 andrò a sottrarre 1 ad ogni valore di count
 	//Basandomi sugli index che trovo grazie sottraendo i valori di count[to_check[i] - '0']
 	//Se la base  è 123 e to_check è 321 in corrispondenza dell'index 1 2 e 3 troverò 1 e togliendo -1 avrò tutti 0.
 	//Se il valore della sottrazione sarà negativo significa che ho trovato un numero che non è stato settato in primis a 1.
