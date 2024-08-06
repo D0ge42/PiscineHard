@@ -90,7 +90,7 @@ int check_combinations(char *base, char *to_check)
 	//Se il numero è 3 count sarà count[base[i] - '0'] o count 3. E count [3] sarà flaggato ad 1. 
 	while(base[i] !='\0')
 	{
-		count[base[i]-'0']++;
+		count[base[i]-'0']--;
 		i++;
 	}
 	i = 0;
@@ -101,8 +101,8 @@ int check_combinations(char *base, char *to_check)
 	//Quindi il primo numero non è una permutazione del secondo.
 	while(to_check[i]!='\0')
 	{
-		count[to_check[i] - '0']--;
-		if(count[to_check[i] - '0'] < 0)
+		count[to_check[i] - '0']++;
+		if(count[to_check[i] - '0'] > 0)
 			return 0;
 		i++;
 	}
@@ -195,5 +195,5 @@ void ft_print_combn(int n)
 
 int main()
 {
-	ft_print_combn(9);
+	ft_print_combn(3);
 }
